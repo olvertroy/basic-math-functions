@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+* {
+  font-family:Arial;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+body {
+  max-width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+div#inputdiv {
+  display:inline-block;
+  position: relative; /*  make label relate to div  */
+  padding-top: 10px;  /*  make space for label      */
+}
+div.seperator {
+  min-height: 150px;
+  margin-top: 6px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 6px;
+  padding:10px;
+  border:1px solid black;
+  display:inline-block;
+}
+#result {
+  margin-top: 10px;
+  min-height: 20px;
+}
+#result2 {
+  margin-top: 10px;
+  min-height: 20px;
+}
+#result3 {
+  margin-top: 10px;
+  min-height: 20px;
+}
+#result4 {
+  margin-top: 10px;
+  min-height: 20px;
+}
+#result5 {
+  margin-top: 10px;
+  min-height: 20px;
+}
+#eyp {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 200px;
+    height: 25px;
+}
+#eyp:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#eyp2 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 200px;
+    height: 25px;
+}
+#eyp2:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#eyp3 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 200px;
+    height: 25px;
+}
+#eyp3:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#eyp4 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 200px;
+    height: 25px;
+}
+#eyp4:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#eyp5 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 200px;
+    height: 25px;
+}
+#eyp5:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#numerator1 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 85px;
+    height: 25px;
+}
+#numerator1:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#denominator1 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 85px;
+    height: 25px;
+}
+#denominator1:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#numerator2 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 85px;
+    height: 25px;
+}
+#numerator2:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+#denominator2 {
+    border:none;
+    border-bottom:1px solid hsl(29, 0%, 60%);
+    font-size: 14px;
+    width: 85px;
+    height: 25px;
+}
+#denominator2:focus {
+   outline:none;
+   border-bottom:2px solid hsl(210, 100%, 50%);
+}
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  top: 18px;
+  transition: 0.4s ease all;
+  color:hsl(29, 0%, 50%);
+}
+#eyp:focus ~ .floating-label,
+#eyp:not(:focus):valid ~ .floating-label {
+  top: -6px;
+  color: hsl(210, 100%, 60%);
+  font-size:12px;
+}
+#eyp2:focus ~ .floating-label,
+#eyp2:not(:focus):valid ~ .floating-label {
+  top: -6px;
+  color: hsl(210, 100%, 60%);
+  font-size:12px;
+}
+#eyp3:focus ~ .floating-label,
+#eyp3:not(:focus):valid ~ .floating-label {
+  top: -6px;
+  color: hsl(210, 100%, 60%);
+  font-size:12px;
+}
+#eyp4:focus ~ .floating-label,
+#eyp4:not(:focus):valid ~ .floating-label {
+  top: -6px;
+  color: hsl(210, 100%, 60%);
+  font-size:12px;
+}
+#eyp5:focus ~ .floating-label,
+#eyp5:not(:focus):valid ~ .floating-label {
+  top: -6px;
+  color: hsl(210, 100%, 60%);
+  font-size:12px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="seperator">    
+
+      <strong><h3>Add two numbers</h3></strong>
+
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="eyp" name="enternum" required />
+          <span class="floating-label">Enter your number</span>
+        </span>
+      </div>
+      +
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="eyp2" name="enternum" required />
+          <span class="floating-label">Enter your number</span>
+        </span>
+      </div>
+
+      <script>
+        function addition() {
+          var a = document.getElementById('eyp').value;
+          var b = document.getElementById('eyp2').value;
+
+          var sum = +(a) + +(b);
+
+          document.getElementById('result').innerHTML = sum;
+        }
+      </script>
+
+      <button id="button" onclick="addition();">Add</button>
+
+      <div id="result">
+        &nbsp;
+      </div>
+
+    </div>
+
+    <div class="seperator">
+
+      <div id="inputdiv">
+        <strong><h3>Is this number even?</h3></strong>
+        <input type="number" id="eyp3" name="isEven" />
+
+      <script>
+        function isEven() {
+          //return true if num is even
+          var num = document.getElementById('eyp3').valueAsNumber; //get value of eyp3
+          var even = ""; //placeholder to pass value to result2
+
+          if (Number.isInteger(num)) {
+
+            if (num % 2 === 0) {
+              var even = "This number is even.";
+            } else {
+              var even = "This number is <strong>not</strong> even."
+            }
+
+            document.getElementById('result2').innerHTML = even; //add string even to result2 div
+          } else {
+            alert("Please enter an integer.");
+          }
+        }
+      </script>
+
+        <button id="button2" onclick="isEven();">Check</button>
+      </div>
+
+      <script>
+
+        var input = document.getElementById("eyp3");
+
+        input.addEventListener("keyup", function(event) {
+          event.preventDefault();
+
+          if (event.keyCode === 13) {
+            document.getElementById("button2").click();
+          }
+        });
+      </script>
+
+      <div id="result2">
+        &nbsp;
+      </div>
+
+    </div>
+
+    <div class="seperator">    
+
+      <strong><h3>Multiply Two Numbers</h3></strong>
+
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="eyp4" name="enternum" required />
+          <span class="floating-label">Enter your number</span>
+        </span>
+      </div>
+      x
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="eyp5" name="enternum" required />
+          <span class="floating-label">Enter your number</span>
+        </span>
+      </div>
+
+      <script>
+        function multiply() {
+          var a = document.getElementById('eyp4').value;
+          var b = document.getElementById('eyp5').value;
+
+          var product = +(a) * +(b);
+
+          document.getElementById('result3').innerHTML = product;
+        }
+      </script>
+
+      <button id="button" onclick="multiply();">Multiply</button>
+
+      <div id="result3">
+        &nbsp;
+      </div>
+
+    </div>
+
+    <div class="seperator">    
+
+      <strong><h3>Divide Two Fractions</h3></strong>
+
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="numerator1" name="enternum" placeholder="Numerator" required />
+        </span>
+      </div>
+/
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="denominator1" name="enternum" placeholder="Denominator" required />
+        </span>
+      </div>
+&#247;
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="numerator2" name="enternum" placeholder="Numerator" required />
+        </span>
+      </div>
+/
+      <div id="inputdiv">
+        <span class="blocking-span">
+          <input id="denominator2" name="enternum" placeholder="Denominator" required />
+        </span>
+      </div>
+
+      <script>
+        function divfraction() {
+          var numerator1 = document.getElementById('numerator1').value;
+          var denominator1 = document.getElementById('denominator1').value;
+
+          var numerator2 = document.getElementById('numerator2').value;
+          var denominator2 = document.getElementById('denominator2').value;
+
+          var fractionvalue1 = +(numerator1) / +(denominator1);
+          var fractionvalue2 = +(denominator2) / +(numerator2);
+
+          var result4 = +(fractionvalue1) * +(fractionvalue2);
+
+          document.getElementById('result4').innerHTML = result4;
+        }
+      </script>
+
+      <button id="button" onclick="divfraction();">Divide</button>
+
+      <div id="result4">
+        &nbsp;
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>
